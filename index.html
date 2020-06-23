@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>8 Planet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="8 planet yang berada di tata surya"/>
+  <meta name="theme-color" content="#00897B"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="white-text">
+  <nav class="z-depth-0 transparent" role="navigation">
+    <div class="nav-wrapper container">
+      <span class="brand-logo hide-on-large-only" id="logo-container">8 Planets</span>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      <ul class="topnav h-center hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <div class="container" id="body-content"></div>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(() => {
+            console.log("Pendaftaran ServiceWorker berhasil");
+          })
+          .catch(() => {
+            console.log("Pendaftaran ServiceWorker gagal");
+          });
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini.");
+    }
+  </script>
+</body>
+</html>
