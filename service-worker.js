@@ -24,7 +24,14 @@ const urlsToCache = [
   '/pages/neptunus.html',
   '/pages/saturnus.html',
   '/pages/uranus.html',
-  '/pages/venus.html'
+  '/pages/venus.html',
+  '/manifest.json',
+  '/apple-touch-icon.png',
+  '/favicon-16x16.png',
+  '/favicon-32x32.png',
+  '/favicon.ico',
+  '/icon-192x192.png',
+  '/icon-512x512.png'
 ];
  
 self.addEventListener('install', event => {
